@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    
+    RewriteEngine  On
+    RewriteCond %{THE_REQUEST} !/public/* [NC]
+    RewriteCond %{THE_REQUEST} /(app|bootstrap|config|databases|resources|storage|vendores)/.+ [NC]
+    RewriteRule ^ index.php [L]
+
+    RewriteRule ^$ public/ [l]
+    RewriteRule (.+) public/$1 [l]
+</IfModule>

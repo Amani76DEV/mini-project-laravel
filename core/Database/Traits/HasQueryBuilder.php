@@ -10,7 +10,7 @@ trait HasQueryBuilder
     private $where = [];
     private $orderBy = [];
     private $limit = [];
-    private $values = [];
+    private $values = []; 
     private $bindingValues = [];
     
     protected function getSql()
